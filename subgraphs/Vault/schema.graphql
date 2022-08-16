@@ -1,0 +1,122 @@
+type VaultDayData @entity{
+  id: ID!
+
+  baseTokenAddress :String!
+
+  date: BigInt!
+
+  debt: BigInt
+
+  loan: BigInt
+
+  ratePerSec: BigInt!
+
+  baseTokenTVL : BigInt!
+
+  baseTokenAmount : BigInt!
+}
+
+type PositionData @entity{
+  id: ID!
+
+  positionId:BigInt!
+
+  block: BigInt
+
+  baseTokenAddress:String
+
+  vaultAddress: String
+
+  transactionHash: String!
+
+  time:BigInt!
+
+  debt: BigInt
+
+  loan: BigInt!
+
+  baseTokenAmount: BigInt!
+
+  ratePerSec:BigInt!
+
+  killTime:BigInt
+}
+
+type DepositData @entity{
+  id: ID!
+
+  vaultAddress:String!
+
+  time:BigInt!
+
+  block: BigInt
+
+  transactionHash: Bytes
+
+  depositAccount : Bytes!
+
+#  depositShare : BigInt!
+
+  depositAmount : BigInt !
+}
+
+type WithdrawData @entity{
+  id: ID!
+
+  vaultAddress:String!
+
+  time:BigInt!
+
+  block: BigInt
+
+  transactionHash: Bytes
+
+  withdrawAccount: Bytes!
+
+#  withdrawShare : BigInt!
+
+  withdrawAmount : BigInt !
+}
+
+type KillData @entity{
+  id : ID!
+
+  block: BigInt
+
+  transactionHash: Bytes
+
+  killer : Bytes
+
+  owner : Bytes
+
+  posVal : BigInt
+
+  debt : BigInt
+
+  prize : BigInt
+
+  left : BigInt
+}
+
+#type PriceUpdateData @entity{
+#  id : ID!
+#
+#  token0: Bytes!
+#
+#  token1 : Bytes!
+#
+#  price : BigInt
+#
+#  timesTamp:BigInt!
+#}
+
+type PositionDayData @entity{
+  id : ID!
+
+  date:BigInt!
+
+  positionTotalAmount: BigInt!
+}
+
+
+

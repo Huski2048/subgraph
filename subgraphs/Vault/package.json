@@ -1,0 +1,15 @@
+{
+  "name": "vault",
+  "description": "HuskiFinance Subgraph",
+  "version": "1.0.0",
+  "repository": "git@github.com:huskifinance/huski-subgraph.git",
+  "author": "HuskiFinance",
+  "scripts": {
+    "remove:Vault": "graph remove huskifinance/Vault --node http://66.42.51.70:8020/",
+    "codegen": "graph codegen subgraph.yaml",
+    "build": "graph build subgraph.yaml",
+    "create": "graph create --node http://66.42.51.70:8020 huskifinance/Vault",
+    "deploy": "graph deploy --product hosted-service --node http://66.42.51.70:8020 --ipfs http://66.42.51.70:5001 huskifinance/Vault subgraph.yaml"
+  }
+}
+

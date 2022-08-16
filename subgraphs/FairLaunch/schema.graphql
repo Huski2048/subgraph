@@ -1,0 +1,95 @@
+type DepositData @entity{
+  id : ID!
+
+  block: BigInt
+
+  transactionHash: Bytes
+
+  user : Bytes!
+
+  pid : BigInt!
+
+  amount : BigInt!
+}
+
+type WithdrawData @entity{
+  id : ID!
+
+  block: BigInt
+
+  transactionHash: Bytes
+
+  user : Bytes!
+
+  pid : BigInt!
+
+  amount : BigInt!
+}
+
+type EmergencyWithdrawData @entity{
+  id : ID!
+
+  block: BigInt
+
+  transactionHash: Bytes
+
+  user : Bytes!
+
+  pid : BigInt!
+
+  amount : BigInt!
+}
+
+type DepositDayData @entity{
+  id : ID!
+
+  amount : BigInt
+
+  pid : BigInt!
+
+  date : BigInt!
+
+  stakeToken : Bytes!
+
+  allocPoint : BigInt!
+
+  lastRewardBlock : BigInt!
+
+  accHuskiPerShare : BigInt!
+
+  accHuskiPerShareTilBonusEnd : BigInt!
+}
+
+type WithdrawDayData @entity{
+  id : ID!
+
+  amount : BigInt
+
+  pid : BigInt!
+
+  date : BigInt!
+}
+
+type EmergencyWithdrawDayData @entity{
+  id : ID!
+
+  amount : BigInt
+
+  pid : BigInt!
+
+  date : BigInt!
+}
+
+type PoolInfoDtat @entity{
+  id : ID!
+
+  stakeToken : Bytes
+
+  allocPoint : BigInt
+
+  lastRewardBlock : BigInt
+
+  accHuskiPerShare : BigInt
+
+  accHuskiPerShareTilBonusEnd : BigInt!
+}
